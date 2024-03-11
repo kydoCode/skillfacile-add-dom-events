@@ -11,7 +11,7 @@ const currentMode = document.getElementById("darkmode");
 let isOff = "Activer le darkmode";
 let isOn = "Désactiver le darkmode";
 let claValue = "darkmondeon";
-let selectors = "body, a, p, #team .teamworker h3, .burger_menu i, .secondary_main_title, footer>p";
+let selectors = ("a:not(footer .paddings_responsive a), a:not(.inscription_button), ul:not(footer ul), body:not(a, p), p:not(footer p), #team .teamworker h3, .burger_menu i, .secondary_main_title"); // a:not(.inscription_button a)" , a,  p, footer>div>article>ul>li>a
 
 const tags = document.querySelectorAll(selectors);
 console.log(`Valeur de ${tags}:`);

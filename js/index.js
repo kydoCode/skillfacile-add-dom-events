@@ -1,5 +1,23 @@
-
+console.log("JS Linked");
 // Dark mode : Créer le code pour ajouter un dark mode au site SkillFacile
+
+let darkMode = false;
+
+const currentMode = document.getElementById("darkmode");
+console.log(currentMode);
+
+function changeDisplay() {
+    console.log('entered func');
+    if (currentMode.innerText === "Activer le darkmode") {
+        darkMode = true;
+        currentMode.innerText = "Désactiver le darkmode";  
+    } else if(currentMode.innerText === "Désactiver le darkmode"){
+        darkMode = false;
+        currentMode.innerText = "Activer le darkmode";
+}};
+
+currentMode.addEventListener("click", changeDisplay);
+console.log(currentMode);
 
 // Menu responsive : vous devez créer un menu responsive qui s'ouvre et se ferme, tel que représenté sur la vidéo de présentation. Petit bonus : faire la fermeture au scroll et la fermeture lorsqu'une modale s'ouvre
 

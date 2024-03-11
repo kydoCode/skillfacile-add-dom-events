@@ -5,14 +5,31 @@ let darkMode = false;
 
 const currentMode = document.getElementById("darkmode");
 console.log(currentMode);
+// const taToDesign = document.getElementsByClassName("secondary_main_title") ;
+// const claToDesign = document.getElementsByTagName() ; // team
+
 
 function changeDisplay() {
     console.log('entered func');
     if (currentMode.innerText === "Activer le darkmode") {
         darkMode = true;
+        const tags = document.querySelectorAll("a, p, h3, i, .secondary_main_title");
+        console.log(`Valeur de ${tags}:`);
+        // const addTag = tags.classList;
+        // addTag.add("darkmondeon");
+        /* for (let i = 0; i < tags.length; i++) {
+            //tag[i].classList;
+            i.add("darkmondeon"); //tag.
+        }*/
+        tags.forEach((tag) => {
+            tag.add("darkmondeon");//classList
+        });
         currentMode.innerText = "Désactiver le darkmode";  
     } else if(currentMode.innerText === "Désactiver le darkmode"){
         darkMode = false;
+        // const addTag = tags.classList;
+        addTag.remove("darkmondeon");
+
         currentMode.innerText = "Activer le darkmode";
 }};
 

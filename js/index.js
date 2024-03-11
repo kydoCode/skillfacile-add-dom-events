@@ -1,20 +1,26 @@
 console.log("JS Linked");
 // Dark mode : Créer le code pour ajouter un dark mode au site SkillFacile
 
-let darkMode = false;
+// let darkMode = false;
 
 const currentMode = document.getElementById("darkmode");
-console.log(currentMode);
+// console.log(currentMode);
 // const taToDesign = document.getElementsByClassName("secondary_main_title") ;
 // const claToDesign = document.getElementsByTagName() ; // team
 
+let isOff = "Activer le darkmode";
+let isOn = "Désactiver le darkmode";
+let claValue = "darkmondeon";
+let selectors = "body, a, p, #team .teamworker h3, .burger_menu i, .secondary_main_title, footer>p";
+
+const tags = document.querySelectorAll(selectors);
+console.log(`Valeur de ${tags}:`);
+const logo = document.getElementById("logo");
 
 function changeDisplay() {
-    console.log('entered func');
-    if (currentMode.innerText === "Activer le darkmode") {
-        darkMode = true;
-        const tags = document.querySelectorAll("a, p, h3, i, .secondary_main_title");
-        console.log(`Valeur de ${tags}:`);
+    // console.log('entered func');
+    if (currentMode.innerText === isOff) {
+        // darkMode = true;
         // const addTag = tags.classList;
         // addTag.add("darkmondeon");
         /* for (let i = 0; i < tags.length; i++) {
@@ -22,15 +28,19 @@ function changeDisplay() {
             i.add("darkmondeon"); //tag.
         }*/
         tags.forEach((tag) => {
-            tag.add("darkmondeon");//classList
+            tag.classList.add(claValue);
         });
-        currentMode.innerText = "Désactiver le darkmode";  
-    } else if(currentMode.innerText === "Désactiver le darkmode"){
+        currentMode.innerText = isOn;  
+        // logo
+        logo.src = "img/logo-blanc.png";
+    } else if(currentMode.innerText === isOn){
         darkMode = false;
         // const addTag = tags.classList;
-        addTag.remove("darkmondeon");
-
-        currentMode.innerText = "Activer le darkmode";
+        tags.forEach((tag) => {
+            tag.classList.remove(claValue);
+        });
+        logo.src = "img/logo-noir.png";
+        currentMode.innerText = isOff;
 }};
 
 currentMode.addEventListener("click", changeDisplay);

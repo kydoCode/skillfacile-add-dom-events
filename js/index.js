@@ -8,10 +8,13 @@ const currentMode = document.getElementById("darkmode");
 // const taToDesign = document.getElementsByClassName("secondary_main_title") ;
 // const claToDesign = document.getElementsByTagName() ; // team
 
-let isOff = "Activer le darkmode";
+let isOff = "Activer le darkmode"; // let selectors = "a:not(footer > .paddings_responsive > article > h2 > ul > li > a, .inscription_button), body, p:not(footer > .paddings_responsive > article > p), #team .teamworker h3, .burger_menu i, .secondary_main_title";
 let isOn = "Désactiver le darkmode";
 let claValue = "darkmondeon";
-let selectors = ("a:not(footer .paddings_responsive a), a:not(.inscription_button), ul:not(footer ul), body:not(a, p), p:not(footer p), #team .teamworker h3, .burger_menu i, .secondary_main_title"); // a:not(.inscription_button a)" , a,  p, footer>div>article>ul>li>a
+// let selectors = ("a:not(footer>.paddings_responsive>article>h2>ul>li>a, .inscription_button), body, p:not(footer>paddings_responsive>article>p), #team .teamworker h3, .burger_menu i, .secondary_main_title"); // a:not(.inscription_button a)" , a,  p, footer>div>article>ul>li>a, ul:not(footer ul), ul:not(footer ul), a:not(footer .paddings_responsive a), a:not(footer .paddings_responsive a), :not(a, p)
+// let selectors = ("a:not(footer > .paddings_responsive > article > h2 > ul > li > a, .inscription_button), body, p:not(footer > .paddings_responsive > article > p), #team .teamworker h3, .burger_menu i, .secondary_main_title");
+let selectors = "a:not(footer > .paddings_responsive > article > ul > li > a, .inscription_button), body, p:not(footer > .paddings_responsive > article > p), #team .teamworker h3, .burger_menu i, .secondary_main_title";
+
 
 const tags = document.querySelectorAll(selectors);
 console.log(`Valeur de ${tags}:`);

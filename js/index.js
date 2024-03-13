@@ -1,44 +1,25 @@
 console.log("JS Linked");
 // Dark mode : Créer le code pour ajouter un dark mode au site SkillFacile
 
-// let darkMode = false;
 
 const currentMode = document.getElementById("darkmode");
-// console.log(currentMode);
-// const taToDesign = document.getElementsByClassName("secondary_main_title") ;
-// const claToDesign = document.getElementsByTagName() ; // team
-
-let isOff = "Activer le darkmode"; // let selectors = "a:not(footer > .paddings_responsive > article > h2 > ul > li > a, .inscription_button), body, p:not(footer > .paddings_responsive > article > p), #team .teamworker h3, .burger_menu i, .secondary_main_title";
+let isOff = "Activer le darkmode"; 
 let isOn = "Désactiver le darkmode";
 let claValue = "darkmondeon";
-// let selectors = ("a:not(footer>.paddings_responsive>article>h2>ul>li>a, .inscription_button), body, p:not(footer>paddings_responsive>article>p), #team .teamworker h3, .burger_menu i, .secondary_main_title"); // a:not(.inscription_button a)" , a,  p, footer>div>article>ul>li>a, ul:not(footer ul), ul:not(footer ul), a:not(footer .paddings_responsive a), a:not(footer .paddings_responsive a), :not(a, p)
-// let selectors = ("a:not(footer > .paddings_responsive > article > h2 > ul > li > a, .inscription_button), body, p:not(footer > .paddings_responsive > article > p), #team .teamworker h3, .burger_menu i, .secondary_main_title");
 let selectors = "a:not(footer > .paddings_responsive > article > ul > li > a, .inscription_button), body, p:not(footer > .paddings_responsive > article > p), #team .teamworker h3, .burger_menu i, .secondary_main_title";
 
-
 const tags = document.querySelectorAll(selectors);
-console.log(`Valeur de ${tags}:`);
+// console.log(`Valeur de ${tags}:`);
 const logo = document.getElementById("logo");
 
 function changeDisplay() {
-    // console.log('entered func');
     if (currentMode.innerText === isOff) {
-        // darkMode = true;
-        // const addTag = tags.classList;
-        // addTag.add("darkmondeon");
-        /* for (let i = 0; i < tags.length; i++) {
-            //tag[i].classList;
-            i.add("darkmondeon"); //tag.
-        }*/
         tags.forEach((tag) => {
             tag.classList.add(claValue);
         });
         currentMode.innerText = isOn;  
-        // logo
         logo.src = "img/logo-blanc.png";
     } else if(currentMode.innerText === isOn){
-        darkMode = false;
-        // const addTag = tags.classList;
         tags.forEach((tag) => {
             tag.classList.remove(claValue);
         });

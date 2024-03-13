@@ -1,7 +1,6 @@
 console.log("JS Linked");
 // Dark mode : Créer le code pour ajouter un dark mode au site SkillFacile
 
-
 const currentMode = document.getElementById("darkmode");
 let isOff = "Activer le darkmode"; 
 let isOn = "Désactiver le darkmode";
@@ -9,7 +8,6 @@ let claValue = "darkmondeon";
 let selectors = "a:not(footer > .paddings_responsive > article > ul > li > a, .inscription_button), body, p:not(footer > .paddings_responsive > article > p), #team .teamworker h3, .burger_menu i, .secondary_main_title";
 
 const tags = document.querySelectorAll(selectors);
-// console.log(`Valeur de ${tags}:`);
 const logo = document.getElementById("logo");
 
 function changeDisplay() {
